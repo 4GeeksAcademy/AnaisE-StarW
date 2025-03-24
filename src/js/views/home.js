@@ -1,8 +1,7 @@
 import React, {useContext, useEffect} from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
-import Example from "../component/Example.jsx";
+import People from "../component/People.jsx";
 
 export const Home = () => {
 	const {actions,store} = useContext (Context)
@@ -16,7 +15,7 @@ export const Home = () => {
 		<h2>characters</h2>
 		<div className="d-flex flex-row overflow-scroll">
 			{store.characters.map((personaje,index)=>(
-			<Example
+			<People
 			key={index} 
 			name={personaje.name}
 			gender={personaje.gender}
