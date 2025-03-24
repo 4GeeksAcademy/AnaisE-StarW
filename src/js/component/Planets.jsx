@@ -24,4 +24,4 @@ const Planet= ({name,population,terrain,id})=>{
     )
 }
 
-export default Planet
+export default Planet
