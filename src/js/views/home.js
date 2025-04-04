@@ -3,7 +3,7 @@ import "../../styles/home.css";
 import { Context } from "../store/appContext";
 import People from "../component/People.jsx";
 import Planet from "../component/Planet.jsx";
-import Vehicle from "../component/Vehicle.jsx"; // Asegúrate de importar Vehicle
+import Vehicle from "../component/Vehicle.jsx";
 
 export const Home = () => {
   const { actions, store } = useContext(Context);
@@ -30,9 +30,13 @@ export const Home = () => {
               key={index}
               name={personaje.name}
               gender={personaje.gender}
-              hair={personaje.hair_color}
-              eye={personaje.eye_color}
+              hair_color={personaje.hair_color}
+              eye_color={personaje.eye_color}
               id={index}
+              height={personaje.height}
+              mass={personaje.mass}
+              skin_color={personaje.skin_color}
+              birth_year={personaje.birth_year}
             />
           ))
         ) : (
@@ -50,6 +54,12 @@ export const Home = () => {
               population={planeta.population}
               terrain={planeta.terrain}
               id={index}
+              rotation_period={planeta.rotation_period}
+              orbital_period={planeta.orbital_period}
+              diameter={planeta.diameter}
+              climate={planeta.climate}
+              gravity={planeta.gravity}
+              surface_water={planeta.surface_water}
             />
           ))
         ) : (
@@ -68,6 +78,12 @@ export const Home = () => {
               cargo_capacity={vehiculo.cargo_capacity}
               max_atmosphering_speed={vehiculo.max_atmosphering_speed}
               id={index}
+              model={vehiculo.model}
+              manufacturer={vehiculo.manufacturer}
+              cost_in_credits={vehiculo.cost_in_credits}
+              length={vehiculo.length}
+              crew={vehiculo.crew}
+              vehicle_class={vehiculo.vehicle_class}
             />
           ))
         ) : (
